@@ -21,5 +21,292 @@
 }
 
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    /* outline: 1px solid maroon; */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+sections {
+    width: 1160px;
+}
+
+img {
+    display: block;
+}
+
+#background {
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 24px;
+}
+
+h1 {
+    font-size: var(--head-xl-size--);
+    line-height: var(--head-xl-line-height--);
+    font-weight: 600;
+    color: var(--clr-gunmetal--);
+}
+
+h2 {
+    font-size: var(--head-l-size--);
+    line-height: var(--head-l-line-height--);
+    font-weight: 600;
+    color: var(--clr-gunmetal--);
+}
+
+h3 {
+    font-size: var(--head-m-size--);
+    line-height: var(--head-m-line-height--);
+    font-weight: 600;
+    color: var(--clr-gunmetal--);
+}
+
+h4 {
+    font-size: var(--head-s-size--);
+    line-height: var(--head-s-line-height--);
+    font-weight: 600;
+    color: var(--clr-gunmetal--);
+}
+
+p {
+    font-size: var(--body-m-size--);
+    line-height: var(--body-m-line-height--);
+    color: var(--clr-dark-electric-blue--);
+}
+
+.logo img {
+    width: 64px;
+    margin-top: 72px;
+}
+
+.section-1 {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.bmi-intro {
+    width: 512px;
+}
+
+.bmi-intro h1 {
+    margin-bottom: 32px;
+}
+
+.bmi-input-box {
+    border-radius: 16px;
+    background-color: var(--clr-pure-white--);
+    margin-top: 28px;
+    box-shadow: 12px 12px 36px 12px rgba(52, 95, 246, 0.1);
+}
+
+.bmi-input {
+    padding: 32px;
+    width: 564px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.result {
+    background-color: #345FF6;
+    border-radius: 10px 100px 100px 10px;
+    color: var(--clr-pure-white--);
+    display: flex;
+    gap: 98px;
+}
+
+.result-left {
+    padding: 32px 0 32px 32px;
+}
+
+.result-left h1 {
+    color: var(--clr-pure-white--);
+}
+
+.result-right {
+    padding: 41px 32px 41px 0;
+}
+
+.result-left p {
+    color: var(--clr-pure-white--);
+    font-weight: 600;
+}
+
+.result-right p {
+    font-size: var(--body-s-size--);
+    line-height: var(--body-s-line-height--);
+    color: var(--clr-pure-white--);
+}
+
+.height-weight-input {
+    display: flex;
+    gap: 24px;
+}
+
+.height-weight-input p {
+    font-size: var(--body-s-size--);
+    line-height: var(--body-s-line-height--);
+}
+.input-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-pure-white--);
+    border: 1px solid var(--clr-borders--);
+    border-radius: 12px;
+    height: 64px;
+    width: 238px;
+    margin-top: 6px;
+}
+
+label {
+    font-size: var(--body-s-size--);
+}
+
+.input-field input {
+    border: none;
+    outline: none;
+    height: 48px;
+    border-radius: 12px;
+    padding: 0 24px;
+    width: 100%;
+    font-size: var(--head-m-size--);
+    line-height: var(--head-m-line-height--);
+    font-weight: 600;
+}
+
+.input-field h3 {
+    color: var(--clr-blue--);
+    margin: 0;
+    padding-right: 24px;
+}
+
+/* Radio Button */
+.container {
+    position: relative;
+    padding-left: 50px;
+    cursor: pointer;
+    height: 32px;
+    width: 238px;
+    display: flex;
+    align-items: center;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 32px;
+    width: 32px;
+    background-color: var(--clr-pure-white--);
+    border-radius: 50%;
+    outline: 1px solid var(--clr-borders--);
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    background-color: var(--clr-pure-white--);
+    outline: 1px solid var(--clr-blue--);
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked~.checkmark {
+    background-color: rgba(52,95,246,0.3);
+    outline: none;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 8px;
+    left: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--clr-blue--);
+}
+
+.container p {
+    font-weight: 600;
+    color: var(--clr-gunmetal--);
+}
+
+.radio {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+}
+
+.person-image img {
+    width: 564px;
+    margin-top: 150px;
+}
+
+.section-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bmi-meaning {
+    width: 490px;
+    margin-top: 300px;
+}
+
+.bmi-meaning h2 {
+    margin-bottom: 32px;
+}
+
+.section-3 {
+    display: flex;
+    gap: 32px;
+    margin-top: 168px;
+    margin-bottom: 216px;
+}
+
+.healthy-eating-section, .regular-exercise-section, .adequate-sleep-section {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.healthy-eating-text, .regular-exercise-text, .adequate-sleep-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
