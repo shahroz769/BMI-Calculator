@@ -294,9 +294,13 @@ label {
 
 .section-3 {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 32px;
     margin-top: 168px;
     margin-bottom: 216px;
+    position: relative;
+    height: 402px;
 }
 
 .healthy-eating-section, .regular-exercise-section, .adequate-sleep-section {
@@ -309,4 +313,8 @@ label {
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+
+#background2 {
+    position: absolute;
 }
