@@ -1,0 +1,25 @@
+:root {
+    --clr-blue--: #345FF6;
+    --clr-gunmetal--: #253347;
+    --clr-dark-electric-blue--: #5E6E85;
+    --clr-borders--: #D8E2E7;
+    --clr-pure-white--: #FFFFFF;
+
+    --head-xl-size--: 64px;
+    --head-xl-line-height--: 1.1;
+    --head-l-size--: 48px;
+    --head-l-line-height--: 1.1;
+    --head-m-size--: 24px;
+    --head-m-line-height--: 1.1;
+    --head-s-size--: 20px;
+    --head-s-line-height--: 1.1;
+
+    --body-m-size--: 16px;
+    --body-m-line-height--: 1.5;
+    --body-s-size--: 14px;
+    --body-s-line-height--: 1.5;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
