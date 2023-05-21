@@ -2,7 +2,7 @@ function changeUnitsToMetric() {
     console.log('Metric ')
     document.getElementById('metric').style.display = "flex"
     document.getElementById('imperial').style.display = "none"
-    document.getElementsByClassName('result')[0].style.display = "none"
+    document.getElementsByClassName('result-box')[0].style.display = "none"
     document.getElementById('imperial-height-ft').value = "";
     document.getElementById('imperial-height-in').value = "";
     document.getElementById('imperial-weight-lb').value = "";
@@ -12,7 +12,7 @@ function changeUnitsToImperial() {
     console.log('Imperial')
     document.getElementById('metric').style.display = "none"
     document.getElementById('imperial').style.display = "flex"
-    document.getElementsByClassName('result')[0].style.display = "none"
+    document.getElementsByClassName('result-box')[0].style.display = "none"
     document.getElementById('metric-height-cm').value = "";
     document.getElementById('metric-weight-kg').value = "";
 }
@@ -57,21 +57,25 @@ function calculateBmiMetric() {
         idealWeight2 = (Math.abs(weightDifference2 - actualWeight)).toFixed(1)
         if (bmiCategory == "Overweight") {
             document.getElementsByClassName('result')[0].style.backgroundColor = "#FD6652"
-            document.getElementsByClassName('result')[0].style.display = "flex"
+            document.getElementsByClassName('result-box')[0].style.display = "flex"
+            document.getElementsByClassName('welcome-box')[0].style.display = "none"
         } else {
             document.getElementsByClassName('result')[0].style.backgroundColor = "#e93c5e"
-            document.getElementsByClassName('result')[0].style.display = "flex"
+            document.getElementsByClassName('result-box')[0].style.display = "flex"
+            document.getElementsByClassName('welcome-box')[0].style.display = "none"
         }
     } else if (bmiCategory == "Underweight") {
         document.getElementById('hide-normal-weight').style.visibility = "visible"
         idealWeight1 = (weightDifference1 + +actualWeight).toFixed(1)
         idealWeight2 = (weightDifference2 + +actualWeight).toFixed(1)
         document.getElementsByClassName('result')[0].style.backgroundColor = "#FD6652"
-        document.getElementsByClassName('result')[0].style.display = "flex"
+        document.getElementsByClassName('result-box')[0].style.display = "flex"
+        document.getElementsByClassName('welcome-box')[0].style.display = "none"
     } else if (bmiCategory == "Normal weight") {
         document.getElementById('hide-normal-weight').style.visibility = "hidden"
         document.getElementsByClassName('result')[0].style.backgroundColor = "#05CEAA"
-        document.getElementsByClassName('result')[0].style.display = "flex"
+        document.getElementsByClassName('result-box')[0].style.display = "flex"
+        document.getElementsByClassName('welcome-box')[0].style.display = "none"
     }
     document.getElementById('result-range').textContent = idealWeight1 + "kgs - " + idealWeight2 + "kgs"
 }
@@ -120,8 +124,8 @@ function calculateBmiImperial() {
     let targetBMI2 = 24.9
     let idealWeight1
     let idealWeight2
-    let weightDifference1 = ((Math.abs(targetBMI1 - bmi)) * (actualHeight * actualHeight))/703;
-    let weightDifference2 = ((Math.abs(targetBMI2 - bmi)) * (actualHeight * actualHeight))/703;
+    let weightDifference1 = ((Math.abs(targetBMI1 - bmi)) * (actualHeight * actualHeight)) / 703;
+    let weightDifference2 = ((Math.abs(targetBMI2 - bmi)) * (actualHeight * actualHeight)) / 703;
     console.log(weightDifference1)
     console.log(weightDifference2)
     if (bmiCategory == "Overweight" || bmiCategory == "Obese") {
@@ -130,21 +134,25 @@ function calculateBmiImperial() {
         idealWeight2 = (Math.abs(weightDifference2 - actualWeight)).toFixed(1)
         if (bmiCategory == "Overweight") {
             document.getElementsByClassName('result')[0].style.backgroundColor = "#FD6652"
-            document.getElementsByClassName('result')[0].style.display = "flex"
+            document.getElementsByClassName('result-box')[0].style.display = "flex"
+            document.getElementsByClassName('welcome-box')[0].style.display = "none"
         } else {
             document.getElementsByClassName('result')[0].style.backgroundColor = "#e93c5e"
-            document.getElementsByClassName('result')[0].style.display = "flex"
+            document.getElementsByClassName('result-box')[0].style.display = "flex"
+            document.getElementsByClassName('welcome-box')[0].style.display = "none"
         }
     } else if (bmiCategory == "Underweight") {
         document.getElementById('hide-normal-weight').style.visibility = "visible"
         idealWeight1 = (weightDifference1 + +actualWeight).toFixed(1)
         idealWeight2 = (weightDifference2 + +actualWeight).toFixed(1)
         document.getElementsByClassName('result')[0].style.backgroundColor = "#FD6652"
-        document.getElementsByClassName('result')[0].style.display = "flex"
+        document.getElementsByClassName('result-box')[0].style.display = "flex"
+        document.getElementsByClassName('welcome-box')[0].style.display = "none"
     } else if (bmiCategory == "Normal weight") {
         document.getElementById('hide-normal-weight').style.visibility = "hidden"
         document.getElementsByClassName('result')[0].style.backgroundColor = "#05CEAA"
-        document.getElementsByClassName('result')[0].style.display = "flex"
+        document.getElementsByClassName('result-box')[0].style.display = "flex"
+        document.getElementsByClassName('welcome-box')[0].style.display = "none"
     }
     document.getElementById('result-range').textContent = idealWeight1 + "lbs - " + idealWeight2 + "lbs"
 }

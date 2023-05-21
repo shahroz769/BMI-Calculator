@@ -31,7 +31,7 @@
     -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    /* outline: 1px solid maroon; */
+    /* outline: 1px solid red; */
 }
 
 body {
@@ -40,7 +40,7 @@ body {
 }
 
 sections {
-    width: 1160px;
+    width: 80.55%;
 }
 
 img {
@@ -52,6 +52,8 @@ img {
     z-index: -10;
     top: 0;
     left: 24px;
+    width: 67.9%;
+    height: 735.8px;
 }
 
 h1 {
@@ -95,13 +97,13 @@ p {
 
 .section-1 {
     display: flex;
-    gap: 80px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    gap: 32px;
 }
 
 .bmi-intro {
-    width: 512px;
+    width: 43.74%;
 }
 
 .bmi-intro h1 {
@@ -113,14 +115,19 @@ p {
     background-color: var(--clr-pure-white--);
     margin-top: 28px;
     box-shadow: 12px 12px 36px 12px rgba(52, 95, 246, 0.1);
+    width: 48.19%;
 }
 
 .bmi-input {
     padding: 32px;
-    width: 564px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 32px;
+}
+
+.result-box {
+    display: none;
 }
 
 .result {
@@ -128,8 +135,23 @@ p {
     border-radius: 10px 100px 100px 10px;
     color: var(--clr-pure-white--);
     display: flex;
-    gap: 98px;
-    display: none;
+    gap: 6.4%;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #345FF6;
+    border-radius: 10px 100px 100px 10px;
+    color: var(--clr-pure-white--);
+    padding: 32px;
+    height: 169.39px;
+    justify-content: center;
+}
+
+.welcome h3, .welcome p {
+    color: var(--clr-pure-white--);
 }
 
 .result-left {
@@ -178,7 +200,7 @@ p {
     border: 1px solid var(--clr-borders--);
     border-radius: 12px;
     height: 64px;
-    width: 238px;
+    width: 100%;
     margin-top: 6px;
 }
 
@@ -214,7 +236,7 @@ label {
     padding-left: 50px;
     cursor: pointer;
     height: 32px;
-    width: 238px;
+    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -286,10 +308,11 @@ label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 32px;
 }
 
 .bmi-meaning {
-    width: 490px;
+    width: 42.24%;
     margin-top: 300px;
 }
 
@@ -326,11 +349,14 @@ label {
 
 #background2 {
     position: absolute;
+    width: 120%;
+    height: 401.95px;
 }
 
 .section-4 {
     display: flex;
-    gap: 132px;
+    justify-content: space-between;
+    gap: 32px;
 }
 
 .bmi-limitations {
@@ -347,6 +373,10 @@ label {
     border-radius: 16px;
     box-shadow: 12px 12px 36px 12px rgba(52, 95, 246, 0.1);
     margin-bottom: 32px;
+}
+
+.gender-box {
+    margin-right: 8.62%;
 }
 
 .gender-content,
