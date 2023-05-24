@@ -3,9 +3,12 @@ function changeUnitsToMetric() {
     document.getElementById('imperial').style.display = "none"
     document.getElementsByClassName('result-box')[0].style.display = "none"
     document.getElementsByClassName('welcome-box')[0].style.display = "flex"
+    document.getElementsByClassName('button-1')[0].style.display = "flex"
+    document.getElementsByClassName('button-2')[0].style.display = "none"
     document.getElementById('imperial-height-ft').value = "";
     document.getElementById('imperial-height-in').value = "";
     document.getElementById('imperial-weight-lb').value = "";
+    
 }
 
 function changeUnitsToImperial() {
@@ -13,6 +16,8 @@ function changeUnitsToImperial() {
     document.getElementById('imperial').style.display = "flex"
     document.getElementsByClassName('result-box')[0].style.display = "none"
     document.getElementsByClassName('welcome-box')[0].style.display = "flex"
+    document.getElementsByClassName('button-1')[0].style.display = "none"
+    document.getElementsByClassName('button-2')[0].style.display = "flex"
     document.getElementById('metric-height-cm').value = "";
     document.getElementById('metric-weight-kg').value = "";
 }

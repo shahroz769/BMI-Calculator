@@ -150,7 +150,6 @@ p {
     border-radius: 16px 100px 100px 16px;
     color: var(--clr-pure-white--);
     padding: 32px;
-    height: 169.39px;
     justify-content: center;
 }
 
@@ -300,7 +299,6 @@ label {
     background: var(--clr-blue--);
 }
 
-
 .container p {
     font-weight: 600;
     color: var(--clr-gunmetal--);
@@ -310,6 +308,51 @@ label {
     display: flex;
     width: 100%;
     gap: 24px;
+}
+
+.button-1 {
+    display: flex;
+    justify-content: center;
+}
+
+.button-2 {
+    display: none;
+    justify-content: center;
+}
+
+button {
+    background-color: var(--clr-blue--);
+    border: none;
+    border-radius: 12px;
+    padding: 16px 32px;
+    width: 100%;
+}
+
+button:active {
+    background-color: #92aafc;
+}
+
+button h4 {
+    color: var(--clr-pure-white--);
+}
+
+.range-bg {
+    background-color: rgba(231, 246, 254, 0.5);
+    border-radius: 16px;
+}
+
+.range {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.range-value{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .bg {
@@ -472,6 +515,7 @@ label {
         width: 450px;
     }
 
+    .welcome,
     .result {
         border-radius: 16px;
     }
@@ -581,7 +625,7 @@ label {
     .bmi-intro,
     .bmi-input-box {
         width: 100%;
-        max-width: none;
+        max-width: 650px;
     }
 
     .bmi-intro {
@@ -784,6 +828,10 @@ label {
     .adequate-sleep-section {
         align-items: flex-start;
     }
+
+    .section-3 {
+        padding: 32px;
+    }
 }
 
 @media screen and (width <=500px) {
@@ -799,6 +847,10 @@ label {
     .result {
         border-radius: 16px;
     }
+
+    .section-3 {
+        padding: 24px;
+    }
 }
 
 @media screen and (width <=410px) {
@@ -807,6 +859,19 @@ label {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .welcome {
+        gap: 12px;
+    }
+
+    .range {
+        padding: 16px;
+    }
+
+
+    .welcome {
+        padding: 16px;
     }
 
     .result {
@@ -827,7 +892,7 @@ label {
     .result {
         flex-direction: column;
     }
-    
+
     .result-left {
         padding: 16px;
     }
