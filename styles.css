@@ -44,17 +44,18 @@ section {
     width: 80.55%;
 }
 
-img {
-    display: block;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-#background {
-    position: absolute;
-    z-index: -10;
-    top: 0;
-    left: 24px;
-    width: 67.9%;
-    height: 735.8px;
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+img {
+    display: block;
 }
 
 h1 {
@@ -331,12 +332,9 @@ label {
 .section-3 {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 32px;
     margin-top: 96px;
     margin-bottom: 120px;
-    position: relative;
-    height: 402px;
 }
 
 .healthy-eating-section,
@@ -344,7 +342,7 @@ label {
 .adequate-sleep-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 45px;
     height: 90%;
 }
@@ -357,29 +355,29 @@ label {
     gap: 24px;
 }
 
-#background2 {
-    position: absolute;
-    width: 120%;
-    height: 401.95px;
-}
-
 .section-4 {
     display: flex;
     justify-content: space-between;
     gap: 32px;
+    margin-bottom: 32px;
 }
 
 .bmi-limitations {
     max-width: 564px;
-    /* width: 564px; */
 }
 
 .bmi-limitations h2 {
     margin-bottom: 32px;
 }
 
+.gender-box {
+    max-width: 365px;
+    min-width: 365px;
+    background-color: var(--clr-pure-white--);
+    border-radius: 16px;
+    box-shadow: 12px 12px 36px 12px rgba(52, 95, 246, 0.1);
+}
 
-.gender-box,
 .age-box,
 .muscle-box,
 .pregnancy-box,
@@ -481,6 +479,10 @@ label {
         width: 100%;
     }
 
+    .input-field input {
+        padding: 0 24px;
+    }
+
     .section-2 img {
         width: 435px;
     }
@@ -534,7 +536,7 @@ label {
     }
 
     .bmi-limitations {
-        padding: 0 32px;
+        padding: 0;
     }
 
     .section-1 {
@@ -557,7 +559,7 @@ label {
     }
 
     .bmi-intro p {
-        padding: 0 16px;
+        padding: 0;
     }
 
     .section-1 {
@@ -651,6 +653,12 @@ label {
         margin-bottom: 16px;
     }
 
+    .healthy-eating-section,
+    .regular-exercise-section,
+    .adequate-sleep-section {
+        align-items: center;
+    }
+
     .last-section-tablet {
         margin-bottom: 96px;
     }
@@ -692,12 +700,23 @@ label {
         flex-direction: column;
     }
 
+    .section-2 {
+        position: static;
+    }
+
     .gender-box-tablet,
     .age-box-tablet,
     .muscle-box-tablet,
     .pregnancy-box-tablet,
     .race-box-tablet {
         max-width: 100%;
+    }
+
+    .healthy-eating-section,
+    .regular-exercise-section,
+    .adequate-sleep-section {
+        flex-direction: column;
+        gap: 32px;
     }
 
     .section-1 {
@@ -709,8 +728,17 @@ label {
     }
 
     .section-3 {
-        margin-top: 128px;
-        margin-bottom: 128px;
+        gap: 40px;
+    }
+
+    .section-3 {
+        margin: 128px 0;
+    }
+
+    .healthy-eating-section,
+    .regular-exercise-section,
+    .adequate-sleep-section {
+        align-items: flex-start;
     }
 }
 
