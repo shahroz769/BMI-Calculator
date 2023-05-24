@@ -1,5 +1,4 @@
 function changeUnitsToMetric() {
-    console.log('Metric ')
     document.getElementById('metric').style.display = "flex"
     document.getElementById('imperial').style.display = "none"
     document.getElementsByClassName('result-box')[0].style.display = "none"
@@ -10,7 +9,6 @@ function changeUnitsToMetric() {
 }
 
 function changeUnitsToImperial() {
-    console.log('Imperial')
     document.getElementById('metric').style.display = "none"
     document.getElementById('imperial').style.display = "flex"
     document.getElementsByClassName('result-box')[0].style.display = "none"
@@ -84,23 +82,14 @@ function calculateBmiMetric() {
 
 function calculateBmiImperial() {
     let imperialHeightInFt = +document.getElementById('imperial-height-ft').value;
-    console.log(imperialHeightInFt)
     let imperialHeightInInch = +document.getElementById('imperial-height-in').value;
-    console.log(imperialHeightInInch)
     let totalImperialHeightInInch = imperialHeightInFt * 12 + imperialHeightInInch;
-    console.log(totalImperialHeightInInch)
     let imperialWeightInLb = +document.getElementById('imperial-weight-lb').value;
-    console.log(imperialWeightInLb)
     let totalImperialHeightInInchSquared = totalImperialHeightInInch * totalImperialHeightInInch;
-    console.log(totalImperialHeightInInchSquared)
     let bmi = ((imperialWeightInLb * 703) / totalImperialHeightInInchSquared).toFixed(1)
-    console.log(bmi)
-    // let weightInPounds = (idealBMI * (heightInInches * heightInInches)) / 703;
     document.getElementById('bmi-value').textContent = bmi
     let actualHeight = totalImperialHeightInInch
-    console.log(actualHeight)
     let actualWeight = imperialWeightInLb
-    console.log(actualWeight)
 
     let bmiCategory
     switch (true) {
@@ -119,7 +108,6 @@ function calculateBmiImperial() {
         default:
             bmiCategory = "Invalid BMI";
     }
-    console.log(bmiCategory)
 
     document.getElementById('bmi-category').textContent = bmiCategory
     let targetBMI1 = 18.5
@@ -128,8 +116,6 @@ function calculateBmiImperial() {
     let idealWeight2
     let weightDifference1 = ((Math.abs(targetBMI1 - bmi)) * (actualHeight * actualHeight)) / 703;
     let weightDifference2 = ((Math.abs(targetBMI2 - bmi)) * (actualHeight * actualHeight)) / 703;
-    console.log(weightDifference1)
-    console.log(weightDifference2)
     if (bmiCategory == "Overweight" || bmiCategory == "Obese") {
         document.getElementById('hide-normal-weight').style.visibility = "visible"
         idealWeight1 = (Math.abs(weightDifference1 - actualWeight)).toFixed(1)
