@@ -31,7 +31,6 @@
     -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    /* outline: 1px solid royalblue; */
 }
 
 body {
@@ -50,9 +49,9 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-input[type=number] {
+/* input[type=number] {
     -moz-appearance: textfield;
-}
+} */
 
 img {
     display: block;
